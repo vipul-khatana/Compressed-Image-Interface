@@ -36,6 +36,36 @@ Its equivalent compressed representation is: 16 16
 
 For every row in the image we store column indices for contiguous segments of black pixels. For example in the line corresponding to row 2 the set of black pixels are from column number 3 to 7. Hence we have 3 7 in the fourth line of the representation. The -1s demarcate the rows. If there are more than 1 contiguous black segments in a row then we store the start and end indices of each segment in order, as for rows 4, 9 and 10.
 
-The ADT for the compressed image described in [CompressedImage.java]()
+The ADT for the compressed image described in [CompressedImage.java](https://github.com/vipul-khatana/Compressed-Image-Interface/blob/master/CompressedImageInterface.java) 
+
+## Methodology Used 
+
++ **Doubly Linked List** A doubly linked list consists of list nodes which have the value contained in the node, the next pointer pointing towards the next node in the list and similarly a previous pointer. The list also has pointers for head and the tail of a list. Hence from any node in the list we can iterate in the forward direction and reach the tail or iterate in the backward direction to reach the head. 
+
+In my implementation, each row of the 2D array is stored as doubly linked list in a compressed format as described above. For a row number i the head of its doubly linked list is stored at the index number i of another array. Thus our compressed representation consists of an array of linked lists. 
+
+This implementation greatly reduces the space required for the storage of the image representation. Also the time complexity for searching the color of a pixel is reduced from O(N2) to O(kN) where k is the length of the linked list, which generally will be smaller than n, for very large values of n. Hence 
+
+## How to run 
+
+*Compile* all the files using `javac *.java`
+
+*Save* the input matrix (2-D array) you want to give in a .txt format 
+
+*Run* as `java LinkedListImage.java sampleInputFile.txt`
+
+## Authors 
+
++ [Vipul Khatana](https://github.com/vipul-khatana)
+
+Course Project under [**Prof Mausam**](http://www.cse.iitd.ac.in/~mausam/)
+
+## Contributing 
+
+1) Fork it (https://github.com/vipul-khatana/Compressed-Image-Interface/fork)
+2) Create your feature branch git checkout -b feature/fooBar
+3) Commit your changes git commit -am 'Add some fooBar'
+4) Push to the branch git push origin feature/fooBar
+5) Create a new pull request
 
 
