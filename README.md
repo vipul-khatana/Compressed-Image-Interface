@@ -18,6 +18,7 @@ Its uncompressed representation is as follows (first two numbers are image width
 1111110011111111 1111000111111111 1100011111111111 1100111111111100 1101111111111000 1111111111100011 1111111111100111 1111111111001111 1111111110011111 1111111000111111
 
 Its equivalent compressed representation is: 16 16
+
 -1
 5 7 -1
 3 7 -1
@@ -33,8 +34,8 @@ Its equivalent compressed representation is: 16 16
 9 10 -1
 7 9 -1
 
-The first line has image width and height respectively. Second line onwards, each line corresponds to image rows (we will number them as 0 to width-1). In each line we store column indices for contiguous segments of black pixels. For example in the line corresponding to row 2 the set of black pixels are from column number 3 to 7. Hence we have 3 7 in the fourth line of the representation. The -1s demarcate the rows. If there are more than 1 contiguous black segments in a row then we store the start and end indices of each segment in order, as for rows 4, 9 and 10.
+For every row in the image we store column indices for contiguous segments of black pixels. For example in the line corresponding to row 2 the set of black pixels are from column number 3 to 7. Hence we have 3 7 in the fourth line of the representation. The -1s demarcate the rows. If there are more than 1 contiguous black segments in a row then we store the start and end indices of each segment in order, as for rows 4, 9 and 10.
 
-The ADT for the compressed image described in CompressedImage.java
+The ADT for the compressed image described in [CompressedImage.java]()
 
 
