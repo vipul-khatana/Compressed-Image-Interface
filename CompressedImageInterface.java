@@ -1,3 +1,8 @@
+/*
+ This file defines the ADT CompressedImageInterface
+ */
+
+
 public interface CompressedImageInterface {
 
     // public void CompressedImageInterface(String filename);
