@@ -1,3 +1,8 @@
+/* Created on Fri Aug  7 07:31:25 2015
+
+ @author: vipulkhatana */
+
+
 /* This function helps us to read and write a .txt file */
 
 import java.io.IOException; 
