@@ -1,4 +1,4 @@
-/* I learned how to read and write the files from homeandlearn.co.uk */
+/* This function helps us to read and write a .txt file */
 
 import java.io.IOException; 
 import java.io.FileReader; 
