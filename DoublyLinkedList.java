@@ -1,12 +1,22 @@
+/*Created on Wed Aug  5 19:34:22 2015
+
+ @author: vipulkhatana
+ 
+This is an implementation of the doubly linked list.
+Every node consists of the value, pointer to the next node and the previous node
+ */
+
 import java.util.*;
 import java.util.Scanner;
 import java.io.IOException;
 
+// Defining the list node
 class ListNode  {
 	private String element;
 	private ListNode  next;
 	private ListNode  prev;
-
+	
+	//Constructors 
 	public ListNode() {
 		this(null);
 	}
@@ -20,30 +30,28 @@ class ListNode  {
 		next = n;
 		prev = p;
 	}
-
-	public ListNode  getNext() {
-
-		///System.out.println("Mil gya");
+	
+	public ListNode  getNext() {//Returns the next element
 		return next;
 	}
-
-	public ListNode  getPrev() {
+	
+	public ListNode  getPrev() {//Returns the prev element
 		return prev;
 	}
-
-	public String getElement() {
+	
+	public String getElement() {//Returns the element of the list node
 		return element;
 	}
-
-	public void setNext(ListNode  n) {
+	
+	public void setNext(ListNode  n) {// Changes the next pointer
 		next =n;
 	}
 
-	public void setPrev(ListNode  p) {
+	public void setPrev(ListNode  p) {//Changes the previous pointer
 		prev = p;
 	}
 
-	public void setValue(String item) {
+	public void setValue(String item) {//Set the value of a node
 		element = item;
 	}
 }
@@ -64,19 +72,15 @@ public class DoublyLinkedList{
 	public int size(){
 		return num_nodes;
 	}
-
-	public void addFirst(String item){
-		//System.out.println("added the element " + item);
-		if (num_nodes == 0)
-		{
+	
+	public void addFirst(String item){// Add a node at the beginning of the list
+		if (num_nodes == 0){
 			ListNode node = new ListNode (item);
 			head = node;
 			tail = node;
 			num_nodes++;
-			//System.out.println("added the element " + item);
 		}
-		else 
-		{	
+		else {
 			ListNode node = new ListNode (item, head, null);
 			head.setPrev(node);
 			head = node;
@@ -84,7 +88,7 @@ public class DoublyLinkedList{
 		}
 	}
 
-	public void addAfter(ListNode n, String item){
+	public void addAfter(ListNode n, String item){// Add a node after position n
 		if (n != null){
 			ListNode node = new ListNode (item, n.getNext(),n);
 			n.setNext(node);
@@ -98,38 +102,30 @@ public class DoublyLinkedList{
 		}
 		num_nodes++;
 	}
-
-	public void addLast(String item){
-		if (num_nodes == 0)
-		{
+	
+	public void addLast(String item){// Adds a node at the end of the list 
+		if (num_nodes == 0){
 			ListNode  node = new ListNode  (item);
 			head = node;
 			tail = node;
 			num_nodes++;
 		}
-		else 
-		{	
+		else{
 			ListNode  node = new ListNode  (item, null, tail);
 			tail.setNext(node);
 			tail = node;
 			num_nodes++;
 		}
 	}
-
-	public String getFirst() throws IOException {
+	
+	public String getFirst() throws IOException { // Returns the head
 		if (num_nodes == 0){
 			throw new IOException();
 		}
 		else return head.getElement();
 	}
-	/*public E getlast() throws EmptyListException{
-		if (num_nodes==0){
-			throw new EmptyListException("The list is Empty");
-		}
-		else return tail.getElement();
-	}*/
-
-	public String removeFirst() {
+	
+	public String removeFirst() { //Removes the head 
 		if (head == null){
 			System.out.println("The list is Empty, hence can not remove first");
 			return null;
@@ -143,7 +139,7 @@ public class DoublyLinkedList{
 		}
 	}
 
-	public String removeAfter(ListNode  n) {
+	public String removeAfter(ListNode  n) {// Removes the node after the node n
 		if (n != null){
 			if (n != tail){
 				String temp = n.getNext().getElement();
@@ -153,19 +149,18 @@ public class DoublyLinkedList{
 				num_nodes--;
 				return temp;
 			}
-				else 
-					{
-						System.out.println("There is no next node to remove");
-						return null;
+			else{
+				System.out.println("There is no next node to remove");
+				return null;
+			}
 		}
-	}
 		else {
 			removeFirst();
 		}
 		return null;
 	}
 
-	public String remove(String item) {
+	public String remove(String item) {// Removes and returns a value from a list
 		for (ListNode  n = head;n != null; n = n.getNext()){
 			if (n.getElement().equals(item)){
 				String temp = item;
@@ -197,6 +192,7 @@ public class DoublyLinkedList{
 		return val;
 	}
 
+	//Testing the implementation
 	public static void main(String [] args) throws IOException 
 	{
 		DoublyLinkedList list = new DoublyLinkedList();
