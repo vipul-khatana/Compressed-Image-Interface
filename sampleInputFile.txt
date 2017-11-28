@@ -1,0 +1,33 @@
+16 16
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+1 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1
+1 1 1 0 0 0 0 0 1 1 1 1 1 1 1 1
+1 1 0 0 0 0 0 0 1 1 1 1 1 1 1 1
+1 1 0 1 1 1 0 0 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1
+1 1 1 1 1 1 0 0 1 1 1 1 1 1 1 1
+1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1
+1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1
+1 1 0 0 1 1 1 1 1 1 1 1 1 1 0 0
+1 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0
+1 1 1 1 1 1 1 1 1 1 1 0 0 0 1 1
+1 1 1 1 1 1 1 1 1 1 1 0 0 1 1 1
+1 1 1 1 1 1 1 1 1 1 0 0 1 1 1 1
+1 1 1 1 1 1 1 1 1 0 0 1 1 1 1 1
+1 1 1 1 1 1 1 0 0 0 1 1 1 1 1 1 
+
+
+if (start == Integer.parseInt(temp.getElement()))
+                {
+                    if ( temp.getElement().equals(temp.getNext().getElement()))
+                    {
+                        temp = temp.getNext();
+                        arrlist[x+1].removeAfter(temp.getPrev().getPrev());
+                        temp = temp.getNext();
+                        arrlist[x+1].removeAfter(temp.getPrev().getPrev());
+                    }
+                    else 
+                    {
+                        temp.setValue(String.valueOf(Integer.parseInt(temp.getElement()) + 1));   
+                    }
+                }
