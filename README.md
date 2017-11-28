@@ -8,8 +8,8 @@ Imagine a grayscale image of size NxN. Each pixel is either black (0) or white (
 
 Its uncompressed representation is as follows (first line is image width and height):
 
-16 16
-1111111111111111
+16 16 /
+1111111111111111 /
 1111100011111111
 1110000011111111 
 1100000011111111 
