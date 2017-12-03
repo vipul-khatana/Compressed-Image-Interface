@@ -1,4 +1,6 @@
 /*
+Created on Wed Aug  5 2015
+@author: vipulkhatana
 This is an implementation of the doubly linked list.
 Every node consists of the value, pointer to the next node and the previous node
  */
