@@ -1,6 +1,8 @@
-//
-
-// This is the implementation of the CompressedImageInterface using Linked Lists
+/*
+Created on Sat Aug  8 2015
+@author: vipulkhatana
+This is the implementation of the CompressedImageInterface using Linked Lists
+*/ 
 
 public class LinkedListImage implements CompressedImageInterface {
     public DoublyLinkedList [] arrlist;
