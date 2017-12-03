@@ -1,4 +1,4 @@
-/*Created on Wed Aug  5 16:44:42 2015
+/*Created on Wed Aug  5 2015
 
  @author: vipulkhatana
  This file defines the ADT CompressedImageInterface
