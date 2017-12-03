@@ -1,6 +1,5 @@
-// Created on Fri Aug  7 09:51:52 2015
+//
 
-// @author: vipulkhatana
 // This is the implementation of the CompressedImageInterface using Linked Lists
 
 public class LinkedListImage implements CompressedImageInterface {
