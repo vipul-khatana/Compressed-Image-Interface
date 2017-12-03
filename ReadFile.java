@@ -1,9 +1,8 @@
-/* Created on Fri Aug  7 07:31:25 2015
+/* Created on Wed Aug 5 2015
 
- @author: vipulkhatana */
+ @author: vipulkhatana 
 
-
-/* This function helps us to read and write a .txt file */
+This function helps us to read and write a .txt file */
 
 import java.io.IOException; 
 import java.io.FileReader; 
